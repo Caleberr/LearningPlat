@@ -58,7 +58,13 @@ const LoginPage = () => {
                                 Sign In
                             </button>
 
-                            <a onClick = {() => setIsSignup(false)}> Already have an account? Log in here.</a>
+                            <button 
+                                type="button"
+                                className="link-button"
+                                onClick={() => setIsSignup(false)}
+                            >
+                                Already have an account? Log in here.
+                            </button>
                         </form>
                     </div>
                 </div>
@@ -80,7 +86,13 @@ const LoginPage = () => {
                                 Sign In
                             </button>
 
-                            <a onClick = {() => setIsSignup(true)}> Don't have an account? Sign up here.</a>
+                            <button 
+                                type="button"
+                                className="link-button"
+                                onClick={() => setIsSignup(true)}
+                            >
+                                Don't have an account? Sign up here.
+                            </button>
                         </form>
                     </div>
                 </div>
