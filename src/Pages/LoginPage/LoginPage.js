@@ -21,6 +21,22 @@ const LoginPage = () => {
         userType: "",
     })
 
+    // Temporary function to call health endpoint
+    const handleSignIn = async (e) => {
+        e.preventDefault(); // Prevent form submission
+        
+        try {
+            const response = await fetch('https://learningplatapi.onrender.com/api/health');
+            const data = await response.json();
+            
+            // Display the response in an alert
+            alert(`Health Check Response: ${JSON.stringify(data, null, 2)}`);
+        } catch (error) {
+            // Handle any errors
+            alert(`Error calling health endpoint: ${error.message}`);
+        }
+    };
+
     return ( 
         <div>
             {isSignup ? (
@@ -30,7 +46,7 @@ const LoginPage = () => {
                         <h1 className="login-title">SIGN IN</h1>
                         <p className="login-subtitle">Create an account to start learning!</p>
                         
-                        <form className="login-form">
+                        <form className="login-form" onSubmit={handleSignIn}>
                             {/* User credential fields */}
                             
                             <InputField label = "Username"         type = "text"     placeholder = "Enter your username"   onChange = {(e) => setSigninInfo({...SigninInfo, username: e.target.value})} />
@@ -75,7 +91,7 @@ const LoginPage = () => {
                         <h1 className="login-title">LOG IN</h1>
                         <p className="login-subtitle">Log in to continue learning!</p>
                         
-                        <form className="login-form">
+                        <form className="login-form" onSubmit={handleSignIn}>
                             {/* User credential fields */}
                             
                             <InputField label = "Email"    type = "email"    placeholder = "Enter your email"    onChange = {(e) => setLoginInfo({...loginInfo, email: e.target.value})} />
