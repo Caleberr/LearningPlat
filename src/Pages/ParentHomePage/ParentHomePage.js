@@ -6,15 +6,14 @@ import MessageCard from './Components/MessageCard';
 import UpcomingEvent from './Components/UpcomingEvent';
 
 function ParentHomePage() {
-    const [parentInfo, setParentInfo] = useState({
+    const [parentInfo] = useState({
         firstName: 'Sarah',
         lastName: 'Johnson',
         totalChildren: 2,
-        unreadMessages: 3,
-        upcomingEvents: 5
+        activeAlerts: 1
     });
 
-    const [children, setChildren] = useState([
+    const [children] = useState([
         { 
             id: 1, 
             name: 'Emma Johnson', 
@@ -35,14 +34,14 @@ function ParentHomePage() {
         }
     ]);
 
-    const [progressData, setProgressData] = useState([
+    const [progressData] = useState([
         { subject: 'Cybersecurity', child: 'Emma', progress: 85, grade: 'A-' },
         { subject: 'Programming', child: 'Alex', progress: 94, grade: 'A+' },
         { subject: 'Digital Literacy', child: 'Emma', progress: 78, grade: 'B+' },
         { subject: 'Web Development', child: 'Alex', progress: 89, grade: 'A-' }
     ]);
 
-    const [messages, setMessages] = useState([
+    const [messages] = useState([
         { 
             id: 1, 
             from: 'Ms. Rodriguez - Cybersecurity Teacher', 
@@ -69,7 +68,7 @@ function ParentHomePage() {
         }
     ]);
 
-    const [upcomingEvents, setUpcomingEvents] = useState([
+    const [upcomingEvents] = useState([
         { id: 1, title: 'Parent-Teacher Conference', date: '2024-01-18', time: '3:00 PM', child: 'Emma' },
         { id: 2, title: 'Science Fair Presentation', date: '2024-01-20', time: '10:00 AM', child: 'Alex' },
         { id: 3, title: 'Cybersecurity Workshop', date: '2024-01-22', time: '2:00 PM', child: 'Emma' },

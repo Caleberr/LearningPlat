@@ -21,6 +21,8 @@ const LoginPage = () => {
         userType: "",
     })
 
+    // Remove unused handleSubmit function and nested block
+    // Lines 24-26 should be removed entirely
     const handleSubmit = () => {
         {/* */}
     }
@@ -94,3 +96,15 @@ const LoginPage = () => {
 };
 
 export default LoginPage;
+
+
+function LoginPage() {
+    // Fix anchor tags - replace with buttons or add href
+    <button 
+        className="forgot-password-link"
+        onClick={() => console.log('Forgot password clicked')}
+        type="button"
+    >
+        Forgot Password?
+    </button>
+}

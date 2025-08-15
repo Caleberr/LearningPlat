@@ -5,28 +5,30 @@ import AchievementCard from './Components/AchievementCard';
 import ActivityCard from './Components/ActivityCard';
 import {useState} from "react";
 
-const LearnerHomePage = () => {
-
-    const [learnerInfo, setLearnerInfo] = useState({
-        name: "John Doe",
-        level: "Beginner",
-        points: 1250,
-        coursesCompleted: 3,
+function LearnerHomePage() {
+    const [learnerInfo] = useState({
+        firstName: 'Alex',
+        lastName: 'Johnson',
+        grade: '10th Grade',
+        school: 'Cyber Academy High',
+        totalCourses: 4,
+        completedCourses: 2,
+        currentStreak: 7
     });
 
-    const [courses, setCourses] = useState([
+    const [courses] = useState([
         { id: 1, title: "Introduction to Cybersecurity", progress: 75, difficulty: "Beginner" },
         { id: 2, title: "Network Security Basics", progress: 45, difficulty: "Intermediate" },
         { id: 3, title: "Ethical Hacking Fundamentals", progress: 0, difficulty: "Advanced" },
     ]);
 
-    const [achievements, setAchievements] = useState([
+    const [achievements] = useState([
         { id: 1, title: "First Course Completed", icon: "🏆", earned: true },
         { id: 2, title: "Week Streak", icon: "🔥", earned: true },
         { id: 3, title: "Quiz Master", icon: "🧠", earned: false },
     ]);
 
-    const [recentActivities, setRecentActivities] = useState([
+    const [recentActivities] = useState([
         { id: 1, activity: "Completed lesson: Password Security", time: "2 hours ago" },
         { id: 2, activity: "Started course: Network Security Basics", time: "1 day ago" },
         { id: 3, activity: "Earned achievement: First Course Completed", time: "3 days ago" },

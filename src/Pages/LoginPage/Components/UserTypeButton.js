@@ -1,19 +1,18 @@
 import { useState } from 'react';
 
-
-const UserTypeButton = ({label, onClick, isSelected, activeColor}) => {
-    const[SelectedStyle, setSelectedStyle] = useState({
-        backgroundColor: activeColor,
+function UserTypeButton({ userType, isSelected, onSelect }) {
+    const [selectedStyle] = useState({
+        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
         color: 'white',
-        border: `1px solid ${activeColor}`,
-
+        transform: 'translateY(-2px)',
+        boxShadow: '0 8px 25px rgba(102, 126, 234, 0.3)'
     });
 
-    const [unSelectedStyle, setUnSelectedStyle] = useState({
-        backgroundColor: 'white',
-        color: activeColor,
-        border: `1px solid ${activeColor}`,
-    })
+    const [unSelectedStyle] = useState({
+        background: 'white',
+        color: '#333',
+        border: '2px solid #e1e5e9'
+    });
 
     return(
         <button type="button" className="user-type-btn" onClick = {onClick} style = {isSelected ? SelectedStyle : unSelectedStyle}>
