@@ -1,0 +1,39 @@
+.announcement-card {
+    background: linear-gradient(135deg, #d299c2 0%, #fef9d7 100%);
+    border-radius: 10px;
+    padding: 15px;
+    transition: transform 0.3s ease;
+}
+
+.announcement-card:hover {
+    transform: translateX(5px);
+}
+
+.announcement-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.announcement-header h4 {
+    margin: 0;
+    color: #333;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.announcement-date {
+    color: #666;
+    font-size: 0.8rem;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 3px 8px;
+    border-radius: 10px;
+}
+
+.announcement-content {
+    color: #555;
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}

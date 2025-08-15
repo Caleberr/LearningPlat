@@ -1,0 +1,148 @@
+.teacher-homepage {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.teacher-header {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.welcome-section h1 {
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.welcome-section p {
+    color: #666;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.teacher-stats {
+    display: flex;
+    gap: 30px;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 15px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 12px;
+    color: white;
+    min-width: 100px;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.teacher-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.classes-section,
+.assignments-section,
+.recent-students-section,
+.announcements-section {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.classes-section h2,
+.assignments-section h2,
+.recent-students-section h3,
+.announcements-section h3 {
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.classes-grid,
+.assignments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.students-list,
+.announcements-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .teacher-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .teacher-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .teacher-stats {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .teacher-homepage {
+        padding: 15px;
+    }
+    
+    .teacher-header {
+        padding: 20px;
+    }
+    
+    .welcome-section h1 {
+        font-size: 2rem;
+    }
+    
+    .teacher-stats {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .classes-grid,
+    .assignments-grid {
+        grid-template-columns: 1fr;
+    }
+}

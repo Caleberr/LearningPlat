@@ -1,0 +1,153 @@
+.parent-homepage {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.parent-header {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.welcome-section h1 {
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.welcome-section p {
+    color: #666;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.parent-stats {
+    display: flex;
+    gap: 30px;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 15px;
+    background: linear-gradient(135deg, #ff9a9e, #fecfef);
+    border-radius: 12px;
+    color: white;
+    min-width: 100px;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.parent-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.children-section,
+.progress-section,
+.messages-section,
+.events-section {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.children-section h2,
+.progress-section h2,
+.messages-section h3,
+.events-section h3 {
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.children-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.progress-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.messages-list,
+.events-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .parent-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .parent-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .parent-stats {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .parent-homepage {
+        padding: 15px;
+    }
+    
+    .parent-header {
+        padding: 20px;
+    }
+    
+    .welcome-section h1 {
+        font-size: 2rem;
+    }
+    
+    .parent-stats {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .children-grid,
+    .progress-grid {
+        grid-template-columns: 1fr;
+    }
+}

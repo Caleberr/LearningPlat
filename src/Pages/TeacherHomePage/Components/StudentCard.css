@@ -1,0 +1,44 @@
+.student-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.student-card:hover {
+    transform: translateX(5px);
+}
+
+.student-info h4 {
+    margin: 0 0 5px 0;
+    color: #333;
+    font-weight: 600;
+}
+
+.student-class {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0 0 5px 0;
+}
+
+.last-active {
+    color: #888;
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+.progress-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: conic-gradient(#4CAF50 0deg, #4CAF50 calc(var(--progress, 0) * 3.6deg), #e0e0e0 calc(var(--progress, 0) * 3.6deg));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #333;
+    font-size: 0.9rem;
+}
