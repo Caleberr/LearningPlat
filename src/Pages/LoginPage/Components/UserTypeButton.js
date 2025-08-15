@@ -15,8 +15,8 @@ function UserTypeButton({ userType, isSelected, onSelect }) {
     });
 
     return(
-        <button type="button" className="user-type-btn" onClick = {onClick} style = {isSelected ? SelectedStyle : unSelectedStyle}>
-            {label}
+        <button type="button" className="user-type-btn" onClick={onSelect} style={isSelected ? selectedStyle : unSelectedStyle}>
+            {userType}
         </button>
     )
 }
